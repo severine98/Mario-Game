@@ -80,6 +80,16 @@
   font-size: 1.5em;
 }
 
+* body #section-2 #mushroom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 * body #section-2 img {
   max-width: 180px;
   display: none;
