@@ -25,7 +25,7 @@ const makeCoins = () => {
     for (i = 0; i < 10; i++) {
 
         let obj = {
-            left: Math.floor(Math.random() * (window.innerWidth - 100) + 100), //WHY 100??
+            left: Math.floor(Math.random() * (window.innerWidth - 100)), //WHY 100??
             top: Math.floor(Math.random() * (600 - 100)),
             id: i,
         };
