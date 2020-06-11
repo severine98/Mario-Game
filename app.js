@@ -10,8 +10,8 @@ let restartButton = document.getElementById('restart');
 // MARIO AND COINS OBJECTS
 
 let mario = {
-    top: 200,
-    left: window.innerWidth/2, //Position mario in the center
+    top: 50,
+    left: 50,
     right: 150,
     bottom: 150,
     width: 100,
@@ -124,7 +124,7 @@ const generateCoin = () => {
 window.onload = generateCoin;
 
 
-// COINS COLLISION
+// COIN COLLISION
 
 const marioCollidesCoin = () => {
 
@@ -216,5 +216,9 @@ restartButton.addEventListener("click", (event) => {
 })
 
 
+//Create function when newBesTime is better than bestTimes, it overrites DOM best time
+
 // ADD A WINDOW THAT SAYS 'You will need a keyboard to play!' WHEN SCREEN SIZE IS TOO SMALL
+// ADD A RESTART 
+// WHEN ALL COINS ARE COLLECTED, GENERATE NEW COINS AND UPDATE BEST TIME IF BETTER// NEED TO GET COLLISION WITH COINS MORE PRECISE 
 // NEED TO GET COINS NOT TOO CLOSE TO BORDER??
