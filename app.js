@@ -3,6 +3,7 @@ let modifier = 20; // HOW MANY PX DOES MARIO MOVE PER PRESS
 let score = 0;
 let currentScore = document.getElementById('currentScore');
 let bestTime = "";
+let restartButton = document.getElementById('restart');
 
 
 
@@ -24,7 +25,7 @@ const makeCoins = () => {
     for (i = 0; i < 10; i++) {
 
         let obj = {
-            left: Math.floor(Math.random() * (window.innerWidth - 100)), //WHY 100??
+            left: Math.floor(Math.random() * (window.innerWidth - 100) + 100), //WHY 100??
             top: Math.floor(Math.random() * (600 - 100)),
             id: i,
         };
@@ -80,13 +81,13 @@ window.addEventListener("keydown", (event) => {
 
 // MARIO STOPS MOVING WHEN AT BORDER OF WINDOW 
 const marioOutOfBorderTop = () => {
-    if (mario.top < 8) { // 8 BECAUSE WIDTH OF BORDER
+    if (mario.top < 12) { // 12 BECAUSE WIDTH OF BORDER
         return true;
     }
 };
 
 const marioOutOfBorderLeft = () => {
-    if (mario.left < 8) {
+    if (mario.left < 12) {
         return true;
     }
 };
@@ -98,7 +99,7 @@ const marioOutOfBorderRight = () => {
 };
 
 const marioOutOfBorderBottom = () => {
-    if (mario.top > (592 - mario.height)) {   // height of section - height of mario - height of border
+    if (mario.top > (542 - mario.height)) {   // height of section - height of mario - height of border
         return true;
     }
 };
@@ -224,6 +225,12 @@ const allCoinsCollected = () => {
 
     }
 }
+
+
+// RESTART
+restartButton.addEventListener("click", (event) => {
+    location.reload();
+})
 
 
 //Create function when newBesTime is better than bestTimes, it overrites DOM best time

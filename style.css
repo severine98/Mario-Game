@@ -8,24 +8,25 @@
 * body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 * body #border {
   width: 100%;
-  height: 600px;
-  border: solid black 4px;
-  background-image: url(./grass.jpg);
+  height: 550px;
+  border: solid red 6px;
+  background-image: url(./PixelArt.png);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 * body #border #mario {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 180px;
 }
 
 * body #border #mario img {
@@ -51,10 +52,42 @@
   color: white;
   text-align: center;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: red 6px solid;
+  border-top: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body #section-2 p {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  * body #section-2 p {
+    display: unset;
+  }
 }
 
 * body #section-2 span {
   color: red;
   font-size: 1.5em;
+}
+
+* body #section-2 img {
+  max-width: 180px;
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  * body #section-2 img {
+    display: unset;
+  }
 }
 /*# sourceMappingURL=style.css.map */
