@@ -124,7 +124,7 @@ const generateCoin = () => {
 window.onload = generateCoin;
 
 
-// COIN COLLISION
+// COINS COLLISION
 
 const marioCollidesCoin = () => {
 
