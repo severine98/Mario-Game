@@ -10,8 +10,8 @@ let restartButton = document.getElementById('restart');
 // MARIO AND COINS OBJECTS
 
 let mario = {
-    top: 50,
-    left: 50,
+    top: 200,
+    left: window.innerWidth/2, //Position mario in the center
     right: 150,
     bottom: 150,
     width: 100,
