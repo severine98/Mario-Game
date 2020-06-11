@@ -25,7 +25,7 @@ const makeCoins = () => {
     for (i = 0; i < 10; i++) {
 
         let obj = {
-            left: Math.floor(Math.random() * (window.innerWidth - 100)), //WHY 100??
+            left: Math.floor(Math.random() * (window.innerWidth - 100)), 
             top: Math.floor(Math.random() * (600 - 100)),
             id: i,
         };
@@ -150,23 +150,6 @@ const marioCollidesCoin = () => {
 }
 
 
-
-
-
-
-
-
-
-// WHEN COIN DISAPEARS, NEW RANDOM COIN NEEDS TO BE GENERATED
-
-// NEED TO CREATE AN ARRAY OF IDS TO GET MULTIPLE COIN?
-
-// COIN SOUND WHENEVER MARIO GETS A COIN
-
-// EACH ARROW KEY MOVEMENT CHANGES MARIO PIC
-
-//Figure out how when in contact with a 'coin', you score increases by 1
-
 // CREATE DIFFERENT FILES FOR CLASSES AND IMPORT 
 
 // TIMER
@@ -233,9 +216,5 @@ restartButton.addEventListener("click", (event) => {
 })
 
 
-//Create function when newBesTime is better than bestTimes, it overrites DOM best time
-
 // ADD A WINDOW THAT SAYS 'You will need a keyboard to play!' WHEN SCREEN SIZE IS TOO SMALL
-// ADD A RESTART 
-// WHEN ALL COINS ARE COLLECTED, GENERATE NEW COINS AND UPDATE BEST TIME IF BETTER// NEED TO GET COLLISION WITH COINS MORE PRECISE 
 // NEED TO GET COINS NOT TOO CLOSE TO BORDER??
