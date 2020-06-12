@@ -139,7 +139,7 @@ const marioOutOfBorderLeft = () => {
 };
 
 const marioOutOfBorderRight = () => {
-    if (mario.left > (window.innerWidth - 108)) { //wINDOW INNER WIDTH - MARIO WIDTH (NEED TO ADD BORDER WIDTH)
+    if (mario.left > (window.innerWidth - 108)) { //wINDOW INNER WIDTH - MARIO WIDTH - BORDER WIDTH
         return true;
     }
 };
@@ -218,3 +218,6 @@ restartButton.addEventListener("click", (event) => {
 // NEED TO GET COINS NOT TOO CLOSE TO BORDER??
 // Get better precision of collision 
 // Make more responsive
+// Make restart proper
+// Need to deploy on github and link to portfolio
+// 15 commits!!!
