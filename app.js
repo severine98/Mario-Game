@@ -19,7 +19,7 @@ let mario = {
 }
 
 
-// COIN array
+// COIN ARRAY
 
 const coins = [];
 
@@ -36,6 +36,8 @@ const makeCoins = () => {
 }
 makeCoins();
 
+// COIN RENDERED TO THE DOM
+
 const generateCoin = () => {
     for (var i = 0; i < coins.length; i++) {
 
@@ -45,6 +47,10 @@ const generateCoin = () => {
         });
     }
 }
+
+// COINS APPEAR ONLOAD
+
+window.onload = generateCoin;
 
 
 // TOP/LEFT INITIAL POSITION OF MARIO - GRABBING FROM DOM AND GIVING SIMPLER NAME
@@ -92,41 +98,6 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
-// MARIO STOPS MOVING WHEN AT BORDER OF WINDOW 
-const marioOutOfBorderTop = () => {
-    if (mario.top < 12) { // 12 BECAUSE WIDTH OF BORDER
-        return true;
-    }
-};
-
-const marioOutOfBorderLeft = () => {
-    if (mario.left < 12) {
-        return true;
-    }
-};
-
-const marioOutOfBorderRight = () => {
-    if (mario.left > (window.innerWidth - 108)) { //wINDOW INNER WIDTH - MARIO WIDTH (NEED TO ADD BORDER WIDTH)
-        return true;
-    }
-};
-
-const marioOutOfBorderBottom = () => {
-    if (mario.top > (542 - mario.height)) {   // height of section - height of mario - height of border
-        return true;
-    }
-};
-
-
-
-// GENERATE  COIN 
-// THIS FUNCTION CREATES 10 NEW COINS WITH RANDOM COORDINATES
-
-// COIN NEEDS TO BE PRESENT WHEN BROWSER LOADS
-
-window.onload = generateCoin;
-
-
 // COIN COLLISION
 
 const marioCollidesCoin = () => {
@@ -153,7 +124,32 @@ const marioCollidesCoin = () => {
 }
 
 
-// CREATE DIFFERENT FILES FOR CLASSES AND IMPORT 
+// MARIO STOPS MOVING WHEN AT BORDER OF WINDOW 
+
+const marioOutOfBorderTop = () => {
+    if (mario.top < 12) { // 12 BECAUSE WIDTH OF BORDER
+        return true;
+    }
+};
+
+const marioOutOfBorderLeft = () => {
+    if (mario.left < 12) {
+        return true;
+    }
+};
+
+const marioOutOfBorderRight = () => {
+    if (mario.left > (window.innerWidth - 108)) { //wINDOW INNER WIDTH - MARIO WIDTH (NEED TO ADD BORDER WIDTH)
+        return true;
+    }
+};
+
+const marioOutOfBorderBottom = () => {
+    if (mario.top > (542 - mario.height)) {   // height of section - height of mario - height of border
+        return true;
+    }
+};
+
 
 // TIMER
 
@@ -186,12 +182,10 @@ timer();
 
 const allCoinsCollected = () => {
     if (score === 10) {
-        // take time from DOM 
-
-
-        // store it in variable bestTime
+        // take time from DOM & store it in variable bestTime
         let newTime = h1.textContent;
-        // Print onto DOM
+
+        // Print onto DOM if new time is better
 
         if (newTime < bestTime || bestTime === "") {
             bestTime = newTime;
@@ -219,9 +213,8 @@ restartButton.addEventListener("click", (event) => {
 })
 
 
-//Create function when newBesTime is better than bestTimes, it overrites DOM best time
 
 // ADD A WINDOW THAT SAYS 'You will need a keyboard to play!' WHEN SCREEN SIZE IS TOO SMALL
-// ADD A RESTART 
-// WHEN ALL COINS ARE COLLECTED, GENERATE NEW COINS AND UPDATE BEST TIME IF BETTER// NEED TO GET COLLISION WITH COINS MORE PRECISE 
 // NEED TO GET COINS NOT TOO CLOSE TO BORDER??
+// Get better precision of collision 
+// Make more responsive
