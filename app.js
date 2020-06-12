@@ -19,6 +19,8 @@ let mario = {
 }
 
 
+// COIN array
+
 const coins = [];
 
 const makeCoins = () => {
@@ -33,6 +35,17 @@ const makeCoins = () => {
     };
 }
 makeCoins();
+
+const generateCoin = () => {
+    for (var i = 0; i < coins.length; i++) {
+
+        $(`<img src="./coin.png" alt="coin" id=${coins[i].id} class="coin">`).appendTo("#border").css({
+            left: coins[i].left,
+            top: coins[i].top
+        });
+    }
+}
+
 
 // TOP/LEFT INITIAL POSITION OF MARIO - GRABBING FROM DOM AND GIVING SIMPLER NAME
 marioElement.style.top = mario.top;
@@ -108,16 +121,6 @@ const marioOutOfBorderBottom = () => {
 
 // GENERATE  COIN 
 // THIS FUNCTION CREATES 10 NEW COINS WITH RANDOM COORDINATES
-
-const generateCoin = () => {
-    for (var i = 0; i < coins.length; i++) {
-
-        $(`<img src="./coin.png" alt="coin" id=${coins[i].id} class="coin">`).appendTo("#border").css({
-            left: coins[i].left,
-            top: coins[i].top
-        });
-    }
-}
 
 // COIN NEEDS TO BE PRESENT WHEN BROWSER LOADS
 
