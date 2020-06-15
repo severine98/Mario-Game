@@ -18,6 +18,10 @@ let mario = {
     height: 100,
 }
 
+// TOP/LEFT INITIAL POSITION OF MARIO - GRABBING FROM DOM AND GIVING SIMPLER NAME
+marioElement.style.top = mario.top;
+marioElement.style.left = mario.left;
+
 
 // COIN ARRAY
 
@@ -50,12 +54,8 @@ const generateCoin = () => {
 
 // COINS APPEAR ONLOAD
 
-window.onload = generateCoin;
+window.onload = generateCoin();
 
-
-// TOP/LEFT INITIAL POSITION OF MARIO - GRABBING FROM DOM AND GIVING SIMPLER NAME
-marioElement.style.top = mario.top;
-marioElement.style.left = mario.left;
 
 // FUNCTION TO MAKE MARIO MOVE USING KEYS
 const marioStyle = mario.style;
@@ -139,7 +139,7 @@ const marioOutOfBorderLeft = () => {
 };
 
 const marioOutOfBorderRight = () => {
-    if (mario.left > (window.innerWidth - 108)) { //wINDOW INNER WIDTH - MARIO WIDTH - BORDER WIDTH
+    if (mario.left > (window.innerWidth - 120)) { //wINDOW INNER WIDTH - MARIO WIDTH - BORDER WIDTH
         return true;
     }
 };
@@ -217,7 +217,4 @@ restartButton.addEventListener("click", (event) => {
 // ADD A WINDOW THAT SAYS 'You will need a keyboard to play!' WHEN SCREEN SIZE IS TOO SMALL
 // NEED TO GET COINS NOT TOO CLOSE TO BORDER??
 // Get better precision of collision 
-// Make more responsive
-// Make restart proper
-// Need to deploy on github and link to portfolio
-// 15 commits!!!
+

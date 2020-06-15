@@ -5,13 +5,12 @@
 
     body {
         width: 100%;
-        height: 100%;
-        overflow-x: hidden;
+        height: 100vh;
 
         #border {
 
             width: 100%;
-            height: 550px;
+            height: 62%;
             border: solid red 6px;
             background-image: url(./PixelArt.png);
             background-size: cover;
@@ -22,8 +21,8 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 150px;
-                height: 180px;
+                width: fit-content;
+                height: fit-content;
 
 
                 img {
@@ -44,7 +43,7 @@
         }
 
         #section-2 {
-            height: 190px;
+            height: 38%;
             background-image: url(./score.jpg);
             background-size: cover;
             background-repeat: no-repeat;
