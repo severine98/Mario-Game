@@ -4,6 +4,11 @@ let score = 0;
 let currentScore = document.getElementById('currentScore');
 let bestTime = "";
 let restartButton = document.getElementById('restart');
+let border = document.getElementById('section-2');
+console.log(border);
+
+let borderBottom = border.offsetHeight;
+
 
 
 
@@ -145,7 +150,7 @@ const marioOutOfBorderRight = () => {
 };
 
 const marioOutOfBorderBottom = () => {
-    if (mario.top > (542 - mario.height)) {   // height of section - height of mario - height of border
+    if (mario.top > (window.innerHeight - borderBottom - 105)) {   // height of window - height of section-2 - height of mario
         return true;
     }
 };
