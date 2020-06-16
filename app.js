@@ -5,11 +5,9 @@ let currentScore = document.getElementById('currentScore');
 let bestTime = "";
 let restartButton = document.getElementById('restart');
 let border = document.getElementById('section-2');
-console.log(border);
-
 let borderBottom = border.offsetHeight;
 
-
+alert("It's a-me, Mario! This game requires a keyboard! Move Mario using arrow keys to collect all the coins! Beat you previous time if you can! Wa-hoo!");
 
 
 // MARIO AND COINS OBJECTS
@@ -33,13 +31,15 @@ marioElement.style.left = mario.left;
 const coins = [];
 
 const makeCoins = () => {
+    console.log(borderBottom);
     for (i = 0; i < 10; i++) {
 
         let obj = {
-            left: Math.floor(Math.random() * (window.innerWidth - 100)), 
-            top: Math.floor(Math.random() * (600 - 100)),
+            left: Math.floor(Math.random() * (window.innerWidth - 100) + 50), 
+            top: Math.floor(Math.random() * (window.innerHeight - borderBottom - 100) + 50), //minus 100 from the full width, adding 50 to centre
             id: i,
         };
+        console.log(obj);
         coins.push(obj);
     };
 }
