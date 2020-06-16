@@ -7,7 +7,7 @@ let restartButton = document.getElementById('restart');
 let border = document.getElementById('section-2');
 let borderBottom = border.offsetHeight;
 
-alert("It's a-me, Mario! This game requires a keyboard! Move Mario using arrow keys to collect all the coins! Beat you previous time if you can! Wa-hoo!");
+alert("It's a-me, Mario! This game requires a keyboard! Move Mario using arrow keys to collect all the coins! Beat your previous time if you can! Wa-hoo!");
 
 
 // MARIO AND COINS OBJECTS
